@@ -1,20 +1,22 @@
 package com.example.oliverng.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class Main2Activity extends AppCompatActivity {
     private boolean isFabOpen = false;
     private ImageButton fab, fab1, fab2, fab3, fab4;
     private Animation fab_open, fab_close, rotate_forward, rotate_backward;
+    private ImageView bottomButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class Main2Activity extends AppCompatActivity {
         fab2 = (ImageButton) findViewById(R.id.fab3);
         fab3 = (ImageButton) findViewById(R.id.fab4);
         fab4 = (ImageButton) findViewById(R.id.fab5);
+
+        bottomButton = (ImageView) findViewById(R.id.bottomButton);
 
         FloatingActionButton floatingButton = (FloatingActionButton) findViewById(R.id.fabasdf);
         floatingButton.setOnClickListener(new View.OnClickListener() {
@@ -43,20 +47,26 @@ public class Main2Activity extends AppCompatActivity {
         rotate_forward = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_forward);
         rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_backwards);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        bottomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 animateFabs();
             }
         });
+
+        findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void animateFabs(){
-
-
         if(isFabOpen){
-
-            fab.startAnimation(rotate_backward);
+            bottomButton.animate().translationX(0);
+//            fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
             fab3.startAnimation(fab_open);
@@ -64,11 +74,10 @@ public class Main2Activity extends AppCompatActivity {
             fab1.setClickable(false);
             fab2.setClickable(false);
             isFabOpen = false;
-            Log.d("Raj", "close");
 
         } else {
-
-            fab.startAnimation(rotate_forward);
+            bottomButton.animate().translationX(-bottomButton.getWidth()*9);
+//            fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
             fab3.startAnimation(fab_close);
@@ -76,7 +85,6 @@ public class Main2Activity extends AppCompatActivity {
             fab1.setClickable(true);
             fab2.setClickable(true);
             isFabOpen = true;
-            Log.d("Raj","open");
 
         }
     }

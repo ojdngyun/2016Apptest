@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.oliverng.myapplication.ButtonContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.oliverng.myapplication.Main3Activity"
+    tools:showIn="@layout/activity_main3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:clipChildren="false">
+
+        <ImageButton
+            android:layout_width="@dimen/main_activity_3_button_size"
+            android:layout_height="@dimen/main_activity_3_button_size"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_ripple"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@drawable/fab_plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdf1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:clipChildren="false">
+
+        <ImageButton
+            android:layout_width="@dimen/main_activity_3_button_size"
+            android:layout_height="@dimen/main_activity_3_button_size"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_ripple"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@drawable/fab_plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdf1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:clipChildren="false">
+
+        <ImageButton
+            android:layout_width="@dimen/main_activity_3_button_size"
+            android:layout_height="@dimen/main_activity_3_button_size"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_ripple"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@drawable/fab_plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdf1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="40dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:clipChildren="false">
+
+        <ImageButton
+            android:layout_width="@dimen/main_activity_3_button_size"
+            android:layout_height="@dimen/main_activity_3_button_size"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_ripple"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@drawable/fab_plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdf1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</com.example.oliverng.myapplication.ButtonContainer>

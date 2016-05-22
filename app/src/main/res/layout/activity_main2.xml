@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
     android:fitsSystemWindows="true"
     tools:context="com.example.oliverng.myapplication.Main2Activity">
 
@@ -21,7 +22,182 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main2" />
+    <RelativeLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/subContainer1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:clipChildren="false"
+            android:elevation="2dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:clipChildren="false"
+                android:elevation="8dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <ImageButton
+                    android:id="@+id/fab"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/oval_ripple"
+                    android:elevation="6dp"
+                    android:src="@drawable/fab_plus"
+                    android:stateListAnimator="@anim/fab_raise" />
+
+                <RelativeLayout
+                    android:id="@+id/redContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_red_dark"
+                    android:clickable="true"
+                    android:clipChildren="false"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:context="com.example.oliverng.myapplication.Main2Activity"
+                    tools:showIn="@layout/activity_main2">
+
+                    <ImageButton
+                        android:id="@+id/fab2"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/oval_ripple"
+                        android:elevation="6dp"
+                        android:src="@drawable/fab_plus" />
+
+                    <ImageButton
+                        android:id="@+id/fab3"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/fab2"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/oval_ripple"
+                        android:elevation="6dp"
+                        android:src="@drawable/fab_plus" />
+
+                    <ImageButton
+                        android:id="@+id/fab4"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/oval_ripple_blue"
+                        android:elevation="6dp"
+                        android:src="@drawable/fab_minus" />
+
+                    <ImageButton
+                        android:id="@+id/fab5"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/fab2"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/oval_ripple_blue"
+                        android:elevation="6dp"
+                        android:src="@drawable/fab_minus" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/middle_container"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subContainer1"
+            android:elevation="1dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/bottomButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/fab_plus"
+                android:background="@drawable/oval_ripple"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:elevation="4dp"/>
+
+            <RelativeLayout
+                android:elevation="3dp"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:background="@android:color/white">
+
+                <RelativeLayout
+                    android:elevation="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:background="@android:color/white">
+
+                    <RelativeLayout
+                        android:elevation="7dp"
+                        android:layout_width="100dp"
+                        android:layout_height="200dp"
+                        android:background="@android:color/white">
+
+                        <RelativeLayout
+                            android:elevation="9dp"
+                            android:layout_width="80dp"
+                            android:layout_height="200dp"
+                            android:background="@android:color/white">
+
+                            <RelativeLayout
+                                android:elevation="11dp"
+                                android:layout_width="60dp"
+                                android:layout_height="200dp"
+                                android:background="@android:color/white">
+
+                                <RelativeLayout
+                                    android:elevation="13dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="200dp"
+                                    android:background="@android:color/white">
+
+                                    <RelativeLayout
+                                        android:elevation="15dp"
+                                        android:layout_width="20dp"
+                                        android:layout_height="200dp"
+                                        android:background="@android:color/white">
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_below="@+id/middle_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next Activity"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:stateListAnimator="@anim/fab_raise" />
+
+    </RelativeLayout>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabasdf"
